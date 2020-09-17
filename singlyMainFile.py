@@ -20,13 +20,13 @@ class LinkedList:
             return False
 
     def insertHead(self, node):
-        node = Node(node)
+        # node = Node(node)
         temp = self.head
         self.head = node
         self.head.next = temp
         del temp
     def middleinsertion(self,node,position):
-        node = Node(node)
+        # node = Node(node)
         if position == 1:
             self.insertHead(node)
             return
@@ -47,7 +47,7 @@ class LinkedList:
                 break
 
     def insertLast(self, node):
-        node = Node(node)
+        # node = Node(node)
         if self.head is None:
             self.head = node
         else:
@@ -58,23 +58,33 @@ class LinkedList:
                 else:
                     last = last.next
             last.next = node
+    def deleteHead(self):
+        if self.isListEmpty() is False:
+            previousHead = self.head
+            self.head = self.head.next
+            previousHead.next = None
+        else:
+            print("Linked list is empty")
+
 
     def deleteAt(self,position):
         if 0 > position > self.listLength():
             print("Invalid position")
             return
-        # if self.isListEmpty() is False:
-        #     if position is 1:
+        if self.isListEmpty() is False:
+            if position == 1:
+                self.deleteHead()
+                return
 
 
-        currentNode = self.head
-        currentPosition = 1
-
-        if position == 1:
             currentNode = self.head
-            self.head = currentNode.next
-            currentNode = None
-        else:
+            currentPosition = 1
+
+        # if position == 1:
+        #     currentNode = self.head
+        #     self.head = currentNode.next
+        #     currentNode = None
+        # else:
             while True:
                 if currentPosition is position:
                     previousNode.next = currentNode.next
@@ -94,9 +104,9 @@ class LinkedList:
         previousNode.next = None
 
 
-    def print(self):
+    def printList(self):
         if self.head is None:
-            print("Nothing is in the list")
+            print("List is empty")
             return
         currentNode = self.head
         while currentNode is not None:
@@ -104,17 +114,12 @@ class LinkedList:
             currentNode = currentNode.next
 
 obj = LinkedList()
-obj.insertLast(1)
-obj.insertLast(2)
-obj.insertLast(3)
-obj.insertLast(4)
-obj.insertLast(5)
-obj.insertLast(6)
-obj.insertLast(7)
-obj.insertLast(8)
-obj.insertLast(9)
-obj.insertLast(10)
-obj.deleteAt(1)
-obj.deleteEnd()
-obj.print()
+node = Node(1)
+obj.insertLast(node)
+node = Node(2)
+obj.insertLast(node)
+node = Node(3)
+obj.insertLast(node)
+
+
 # print(f"List length is {obj.listLength()}")

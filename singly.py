@@ -63,27 +63,41 @@ class LinkedList:
             lastNode = lastNode.next
         previousNode.next = None
 
-    def deleteMiddle(self,position):
-        if 0 < position > self.listLength():
+    def deleteHead(self):
+        if self.isListEmpty() is False:
+            previousHead = self.head
+            self.head = self.head.next
+            previousHead.next = None
+        else:
+            print("Linked list is empty")
+
+    def deleteAt(self, position):
+        if 0 > position > self.listLength():
             print("Invalid position")
             return
-        # if self.isListEmpty() is False:
-        #     if position is 1:
+        if self.isListEmpty() is False:
+            if position == 1:
+                self.deleteHead()
+                return
 
+            currentNode = self.head
+            currentPosition = 1
 
-        currentNode = self.head
-        currentPosition = 1
-        while True:
-            if currentPosition is position:
-                previousNode.next = currentNode.next
-                currentNode= None
-                break
+            # if position == 1:
+            #     currentNode = self.head
+            #     self.head = currentNode.next
+            #     currentNode = None
+            # else:
+            while True:
+                if currentPosition is position:
+                    previousNode.next = currentNode.next
+                    currentNode = None
+                    break
 
-            else:
-                previousNode = currentNode
-                currentNode = currentNode.next
-                currentPosition+=1
-
+                else:
+                    previousNode = currentNode
+                    currentNode = currentNode.next
+                    currentPosition += 1
     def print(self):
         if self.head is None:
             print("Nothing is in the list")
@@ -94,27 +108,27 @@ class LinkedList:
             currentNode = currentNode.next
 
 obj = LinkedList()
-node = Node(1)
-obj.insertLast(node)
-node = Node(2)
-obj.insertLast(node)
-node = Node(3)
-obj.insertLast(node)
-node = Node(4)
-obj.insertLast(node)
-node = Node(5)
-obj.insertLast(node)
-node = Node("Titas")
-obj.insertLast(node)
-node = Node("Ismail")
-obj.middleinsertion(node,2)
-headnode = Node("Head")
-obj.insertHead(headnode)
-obj.delete()
-obj.deleteMiddle(3)
-node = Node("Ok")
-obj.middleinsertion(node,1)
-node = Node("Ok")
-obj.middleinsertion(node,10)
-obj.print()
-print(f"List length is {obj.listLength()}")
+# node = Node(1)
+# obj.insertLast(node)
+# node = Node(2)
+# obj.insertLast(node)
+# node = Node(3)
+# obj.insertLast(node)
+# node = Node(4)
+# obj.insertLast(node)
+# node = Node(5)
+# obj.insertLast(node)
+# node = Node("Titas")
+# obj.insertLast(node)
+# node = Node("Ismail")
+# obj.middleinsertion(node,2)
+# headnode = Node("Head")
+# obj.insertHead(headnode)
+# obj.delete()
+# obj.deleteMiddle(3)
+# node = Node("Ok")
+# obj.middleinsertion(node,1)
+# node = Node("Ok")
+# obj.middleinsertion(node,10)
+# # obj.print()
+# # print(f"List length is {obj.listLength()}")
