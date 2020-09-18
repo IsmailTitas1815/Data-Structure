@@ -1,4 +1,4 @@
-from singlyMainFile import Node, LinkedList
+from LinkedList.singlyMainFile import Node, LinkedList
 
 def mergeLists(firstList,secondList,mergedList):
 
