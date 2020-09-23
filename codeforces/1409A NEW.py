@@ -22,5 +22,3 @@ for i in range(testcase):
         if diff%10 != 0:
             count+=1
         print(count)
-
-
