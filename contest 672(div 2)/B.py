@@ -8,14 +8,14 @@ for i in range(testcase):
     for j in range(len(li)-1):
         for k in range(1,len(li)):
             if j<k:
-                # print(f"li[j]= {li[j]} li[k]= {li[k]}")
+                print(f"li[j]= {li[j]} li[k]= {li[k]}")
                 jnot = ~li[j]
                 knot = ~li[k]
                 andOP = li[j]&li[k]
-                # print("j=",j)
-                # print("and",andOP)
+                print("j=",j)
+                print("and",andOP)
                 xorOP = li[j]&knot | li[k]&jnot
-                # print("Xor",xorOP)
+                print("Xor",xorOP)
                 if andOP>=xorOP:
                     count+=1
     print(count)
