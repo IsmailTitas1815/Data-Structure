@@ -16,8 +16,4 @@ else:
 
 # a = "82374"
 # print(int(a[::-1]))
-str ="titas"
-length = len(str)
-s = []
-while length>0:
-    
+# 729,732,733,160,724,230,267,731B
