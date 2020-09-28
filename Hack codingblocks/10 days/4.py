@@ -1,16 +1,9 @@
 testcase = int(input())
-level = 0
 for i in range(testcase):
+    count= 0
     n  = int(input())
-    count = 1
-    while True:
-        if level==0:
-            count=0
+    b =(bin(n))[2:]
+    for i in b:
+        if i=='1':
             count+=1
-            level+=2
-        elif level<n:
-            count+=1
-            level+=2
-        else:
-            break
     print(count)

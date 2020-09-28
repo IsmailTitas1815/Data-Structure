@@ -10,4 +10,3 @@ for i in range(1, small + 1):
         gcd= i
 
 print(gcd)
-
