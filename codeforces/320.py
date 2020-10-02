@@ -1,7 +1,3 @@
-# n = input()
-# l = len(n)
-#
-# if count()
-#
-#
-#
+n = input()
+l = len(n)
+
