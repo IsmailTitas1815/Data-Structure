@@ -14,3 +14,4 @@ for i in range(len(li)):
     # print("sum =",sum)
     print(count)
 
+# ok
