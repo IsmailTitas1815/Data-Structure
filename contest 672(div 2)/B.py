@@ -19,7 +19,7 @@ for i in range(testcase):
                 if andOP>=xorOP:
                     count+=1
     print(count)
-
+print("Fine")
 
 #
 # a = 4
