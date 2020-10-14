@@ -5,3 +5,4 @@ li.sort()
 plus = '+'
 plus = plus.join(li)
 print(plus)
+
