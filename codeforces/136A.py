@@ -17,7 +17,7 @@ t = int(input())
 li = list(map(int,input().split()))[:t]
 di = {key for key in enumerate(li,1)}
 di = dict(di)
-di = {k: v for k, v in sorted(di.items(), key=lambda item: item[1])}
+di = {k: v for k, v in sorted(di.items(), key=lambda a: a[1])}
 print(*di.keys(),sep=" ")
 
 
