@@ -1,6 +1,8 @@
 def solveSudoku(bigArr, i, j):
-    if (i==len(bigArr)-1):
-        print(bigArr)
+    if (i==len(bigArr)):
+        print("Here is the solution:")
+        for n in range(9):
+            print(*bigArr[n], sep=" ")
     else:
 
         ni = 0
@@ -16,7 +18,7 @@ def solveSudoku(bigArr, i, j):
         if (bigArr[i][j]!=0):
             solveSudoku(bigArr,ni,nj)
         else:
-            for k in range(9):
+            for k in range(1,10):
                 if(isValid(bigArr,i,j,k)==True):
                     bigArr[i][j]= k
                     solveSudoku(bigArr,ni,nj)
@@ -45,9 +47,7 @@ for i in range(9):
     li = list(map(int,input().split()))[:9]
     bigArr.append(li)
 
-
 solveSudoku(bigArr,0,0)
-
 
 
 # 0 0 0 0 6 5 9 2 8
