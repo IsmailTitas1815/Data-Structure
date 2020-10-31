@@ -15,4 +15,4 @@ for i in li:
     if (i*m) in li2:
         count+=1
 
-print(count)
+print(count) 
