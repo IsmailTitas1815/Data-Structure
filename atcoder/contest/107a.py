@@ -1,11 +1,3 @@
-li = list(map(int,input().split()))
-li.sort()
-s = 0
-for i in range(li[0],li[0]+1):
-    for j in range(li[0],li[1]+1):
-        for k in range(li[0],li[2]+1):
-            s += (i*j*k)
-
-
-print(s)
-
+a,b,c = list(map(int,input().split()))
+r = (a*(a+1)//2)*(b*(b+1)//2)*(c*(c+1)//2)
+print(r%998244353)
