@@ -12,4 +12,4 @@ def perm(at,n):
             used[i]=1
             perm(at+1,n)
             used[i]=0
-perm(0,3)
+perm(0,4)
