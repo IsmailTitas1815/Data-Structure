@@ -24,4 +24,14 @@ else:
     else:
         print(-1)
 
-
+# a, b = list(map(int, input().split()))
+# a1 = list(map(int, input().split()))
+# b1 = list(map(int, input().split()))
+# amn = min(a1)
+# bm = min(b1)
+#
+# amx = max(a1)
+# if max(amn * 2, amx) < bm:
+#     print(max(amn * 2, amx))
+# else:
+#     print(-1)
