@@ -22,9 +22,9 @@ nums = list(map(int,input().split()))[:shopNum]
 nums.sort()
 for i in range(int(input())):
     sn = int(input())
-    if sn<min(nums):
+    if sn<nums[0]:
         print(0)
-    elif sn>=max(nums):
+    elif sn>=nums[shopNum-1]:
         print(shopNum)
     else:
         ans = firstOccurance(nums, shopNum, sn)
