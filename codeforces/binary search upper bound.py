@@ -23,3 +23,4 @@ sn = 2
 
 ans = firstOccurance(nums, tl, sn)
 print(ans)
+ 
