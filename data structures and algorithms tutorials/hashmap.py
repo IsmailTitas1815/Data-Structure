@@ -30,14 +30,16 @@ class Hashmap:
 
 
 a = Hashmap()
-a["march 6"] = 120
+a["march 5"] = 120
 a["march 6"] = 78
 a["march 8"] = 67
 a["march 9"] = 4
 a["march 17"] = 459
 print(a.arr)
 print(a.get_hash('march 9'))
-
+a.__delitem__('march 5')
+print(a.arr)
+print(a.__getitem__('march 6'))
 
 
 # class HashTable:
