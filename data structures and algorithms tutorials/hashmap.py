@@ -10,7 +10,9 @@ class Hashmap:
 
     def __getitem__(self, key):
         hash = self.get_hash(key)
-        return self.arr[hash]
+        for element in self.arr[hash]:
+            if element[0]==key:
+                return element[1]
 
     def __setitem__(self, key, val):
         hash = self.get_hash(key)
@@ -23,10 +25,11 @@ class Hashmap:
         if not found:
             self.arr[hash].append((key,val))
 
-
     def __delitem__(self, key):
         hash = self.get_hash(key)
-        self.arr[hash] = None
+        for idx , element in enumerate(self.arr[hash]):
+            if element[0]==key:
+                del self.arr[hash][idx]
 
 
 a = Hashmap()
@@ -35,11 +38,14 @@ a["march 6"] = 78
 a["march 8"] = 67
 a["march 9"] = 4
 a["march 17"] = 459
-print(a.arr)
-print(a.get_hash('march 9'))
-a.__delitem__('march 5')
+a["march 26"] = 459
+a["march 35"] = 459
+
 print(a.arr)
 print(a.__getitem__('march 6'))
+a.__delitem__('march 6')
+print(a.arr)
+
 
 
 # class HashTable:
