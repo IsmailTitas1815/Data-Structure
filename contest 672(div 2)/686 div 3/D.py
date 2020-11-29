@@ -35,10 +35,11 @@ def primeFactors(n):
 
 for i in range(int(input())):
     n = int(input())
-    if isPrime(n):
-        print(n)
-    else:
-        li = primeFactors(n)
+    print(primeFactors(n))
+    # if isPrime(n):
+    #     print(n)
+    # else:
+    #     li = primeFactors(n)
 
 
 
