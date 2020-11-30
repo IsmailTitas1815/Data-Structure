@@ -4,9 +4,11 @@ t = int(input())
 for i in range(t):
     n, k = list(map(int,input().split()))
     li = list(map(int,input().split()))[:n]
-    count = dict(Counter(li))
-    m = max(count.values())
+    c = dict(Counter(li))
+    # print(c)
+    m = max(c.values())
+    # print(m)
     baki = n - m
+    # print(baki)
     days = ceil(baki/k)
     print(days)
-
