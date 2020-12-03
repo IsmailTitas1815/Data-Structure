@@ -3,16 +3,14 @@ def primeSieve(li):
         li[i]= 1
 
     for i in range(3,1000000,2):
-        if li[i]==1:
-            for j in range(i*i,1000000,i):
-                li[j]=0
+        for j in range(i*i,1000000,i):
+            li[j]=0
 
     li[2]=1
 
 
 li = [0]*10000005
 primeSieve(li)
-
 primelist = []
 count = 0
 n = int(input())
