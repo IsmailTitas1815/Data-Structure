@@ -3,8 +3,9 @@ def primeSieve(li):
         li[i]= 1
 
     for i in range(3,1000000,2):
-        for j in range(i*i,1000000,i):
-            li[j]=0
+        if li[i]==1:
+            for j in range(i*i,1000000,i):
+                li[j]=0
 
     li[2]=1
 
