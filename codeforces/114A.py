@@ -9,3 +9,5 @@ if ans==f_ans:
     print(int(ans-1))
 else:
     print("NO")
+
+
