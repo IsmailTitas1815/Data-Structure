@@ -4,11 +4,10 @@ def primeSieve(li):
 
     for i in range(3,1000000,2):
         if li[i]==1:
-            for j in range(i*i,1000000,i):
+            for j in range(i*i,1000000,(2*i)):
                 li[j]=0
 
     li[2]=1
-
 
 li = [0]*10000005
 primeSieve(li)

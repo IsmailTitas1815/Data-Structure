@@ -1,14 +1,9 @@
-def power(b,p):
-    if b==0:
-        return 1
+def rpower(num,idx):
+    if(idx==1):
+       return(num)
     else:
-        t = power(b,p/2)
-        res = t*t
-        
-
-
-
-
-
-b , p = list(map(int,input()))
-print(power(b,p))
+       return(num*rpower(num,idx-1))
+base=int(input("Enter number: "))
+exp=int(input("Enter index: "))
+rpow=rpower(base,exp)
+print("{} raised to {}: {}".format(base,exp,rpow))
