@@ -22,8 +22,6 @@ while r<n:
 l = len(a)-1
 if n>3:
     print(a[l-4],a[l-3],a[l-1])
-elif n==3:
-    print(1,1,1)
 elif n==2:
     print(0,1,1)
 elif n==1:
