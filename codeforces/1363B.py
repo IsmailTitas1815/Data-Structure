@@ -61,5 +61,5 @@ for i in range(int(input())):
         else:
             o20 += 1
 
-        li.append(min(o20 + o1 - o11, o11 + o2 - o20))
+        li.append(min(o1 + o20 - o11, o2 + o11 + - o20))
     print(min(li))
